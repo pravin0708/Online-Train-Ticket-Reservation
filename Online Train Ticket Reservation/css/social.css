@@ -1,0 +1,98 @@
+
+
+.middle {
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.btn1 {
+  display:inline-block;
+  width:60px;
+  height: 60px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow:-5px 5px 15px -5px #f1f1f1; 
+  overflow: hidden;
+  position: relative;
+  transition: 0.3s linear;
+}
+
+.btn1 i {
+  line-height: 60px;
+  font-size: 26px;
+  transition: 0.3s linear;
+}
+
+.btn1:nth-child(1) i {
+  color:#3b5998;
+}
+
+.btn1:nth-child(2) i {
+  color:#1da1f2;
+}
+
+.btn1:nth-child(3) i {
+  color:#e4405f;
+}
+
+.btn1:nth-child(4) i {
+  color:#db4437;
+}
+
+.btn1:hover {
+  transform: scale(1.1);
+}
+
+.btn1:hover i {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+.btn1:before {
+  content:"";
+  position:absolute;
+  width:120%;
+  height:120%;
+  transform: rotate(45deg);
+  left: -110%;
+  top:90%;
+}
+
+.btn1:nth-child(1)::before {
+  background: #3b5998;
+}
+
+.btn1:nth-child(2)::before {
+  background: #1da1f2;
+}
+
+.btn1:nth-child(3)::before {
+  background: #e4405f;
+}
+
+.btn1:nth-child(4)::before {
+  background: #db4437;
+}
+
+.btn1:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes aaa {
+  0% {
+    left: -110%;
+    top:90%;
+  }
+  50% {
+    left:10%;
+    top: -30%;
+  }
+  100% {
+    left: -10%;
+    top: -10%;
+  }
+}

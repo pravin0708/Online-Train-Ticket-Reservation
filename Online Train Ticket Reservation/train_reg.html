@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>User Registration Form</title>
+         <link rel="stylesheet" type="text/css" href="css/default.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+ <style type="text/css">
+     body {
+background: url(images/4.jpg)no-repeat;
+
+        background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+
+  
+font-family: "Times New Roman", Times, serif;
+  height: 90vh;
+}
+ </style>
+    <script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js" charset="UTF-8"></script>
+</head>
+    <body>  
+
+
+
+        <nav class="navbar navbar-inverse" style="background-color: #FFF">
+  <div class="container-fluid" style="background-color: #FFF" >
+    <div class="navbar-header" >
+      <a class="navbar-brand"  style="color:#F2036C">Train Ticket Reservation  System</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="log1.php" style="color:#F2036C"><span class="glyphicon glyphicon-backward" style="color:#F2036C"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+</br></br>
+        <form class="register" method="post" action="train_reg.php">
+            <h1 style="color:#F2036C">Registration</h1>
+            <fieldset class="row1">
+                <legend>Account Details
+                </legend>
+                <p>
+                    <label>Email *
+                    </label>
+                    <input type="email"/ name="email" required="" placeholder=" Mail" >
+                    <label>Username *
+                    </label>
+                    <input type="text" name="uname" required=""/>
+                </p>
+                <p>
+                    <label>Password*
+                    </label>
+                    <input type="password" name="pass" required="" minlength="6" />
+                    <label>Confirm Password*
+                    </label>
+                    <input type="password" name="cnpass" required="" minlength="6" />
+                </p>
+            </fieldset>
+            <fieldset class="row2">
+                <legend>Personal Details
+                </legend>
+                <p>
+                    <label>Name *
+                    </label>
+                    <input type="text" id="name" name="name" class="long" required=""/>
+					<span id="name_validation" class="error"></span>
+                </p>
+                <p>
+                    <label>Phone *
+                    </label>
+                    <input type="text" id="phone" name="phone" maxlength="10" minlength="10" required=""/>
+                </p>
+                <p>
+                    <label class="">Street
+                    </label>
+                    <input type="text" class="long" />
+                </p>
+                <p>
+                    <label>City *
+                    </label>
+                    <input type="text" id="city" name="city" class="long" required=""/>
+                </p>
+                <p>
+                    <label>State *
+                    </label>
+                    <input type="text" id="state" name="state" class="long" required=""/>
+                </p>
+            </fieldset>
+            <fieldset class="row3" >
+                <legend>Further Information
+                </legend>
+                <p>
+                    <label required="">Gender *</label>
+                    <input type="radio" id="gen" name="gen" value="Male" />
+                    <label class="gender">Male</label>
+                    <input type="radio" value="Female"/>
+                    <label class="gender">Female</label>
+                </p>
+                <p>
+                    <label>Birthdate *
+                    </label>
+					<input type="date" name="date" required="">
+                </p>
+                
+            </fieldset>
+            <fieldset class="row4">
+
+            </fieldset>
+            <button class="button" onclick="return val()">Register &raquo;</button>
+        </form>
+    </body>
+<script>
+function val()
+{
+var name=document.getElementById("name");
+var uname=document.getElementById("uname");
+var email=document.getElementById("email");
+var pass=document.getElementById("password");
+var cnpass=document.getElementById("cnpassword");
+var uname=document.getElementById("uname");
+if(name=="" || name==null)
+{
+alert("name cant be empty");
+return false;
+}
+return true;
+}
+</script>
+</html>
+<!--  
+$con=mysqli_connect("localhost","root","","train_register");
+$user=$_POST['uname'];
+$sql=select count(*) from reg where username="$user";
+$res=mysqli_query($con,$sql);
+if(res>0)
+echo"username already exist";*/
+?>-->
+
+
+
+
+
